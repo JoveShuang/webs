@@ -1,0 +1,21 @@
+{
+  "name": "web-pages",
+  "version": "1.0.0",
+  "description": "web静态页面开发环境",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:iexn/web-pages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-watch": "^0.5.8",
+    "ws": "^5.1.1"
+  }
+}

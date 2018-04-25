@@ -1,0 +1,316 @@
+$background-color-main:#352d2f;
+$background-color:#f5f5f5 !default;
+$color-red:#f63c3c;
+$p-color:#8a8a8a;
+$text-a-c:center;
+$text-a-l:left;
+$text-a-r:right;
+//主体
+
+.container{
+    font-family:Teko Regular;
+}
+@mixin h2-p{
+    h2{
+        margin-bottom:12px;
+    }
+    p{
+        color:$p-color;
+        line-height:16px;
+    }
+}
+@mixin button{
+    button{
+        margin-top:42px;
+        border:2px solid #000;
+        border-radius:16px/50%;
+        padding:10px;
+    }
+}
+//content1
+.content1{
+    background-color:$background-color;
+    padding:36px 15% 50px 15%;
+    .cont1-top{
+        text-align:$text-a-c;
+        padding-bottom:38px;
+        .cont1-top-title{
+            $width:342px;
+            width:$width;
+            margin:0 auto;
+            h1{
+                line-height:34px;
+            }
+            p{
+                color:$p-color;
+            }
+            padding-bottom:34px;
+        }
+        .cont1-top-video{
+            margin:0 auto;
+            width:732px;
+            height:436px;
+            background-color:$background-color-main;
+        }
+    }
+    
+    .cont1-middle{
+        .cont1-mid-cont{
+            width:50%;
+            float:left;
+            .cont1-icon{
+                line-height:44px;
+            }
+            i{
+                font-size:32px;
+                color:$color-red;
+            }
+            @include h2-p;
+            margin-bottom:40px;
+        }
+    }
+    .cont1-bottom{
+        padding:60px 0;
+        .cont1-bottom-left{
+            width:50%;
+        }
+        .cont1-bottom-right{
+            width:50%;
+            i{
+                font-size:60px;
+                color:$color-red;
+            }
+            @include h2-p;
+            
+        }
+    }
+}
+
+
+//content2
+.content2{
+    background-color:$background-color;
+    .cont2-title{
+        background-color:$color-red;
+        padding:34px 0 38px 0;
+        text-align:$text-a-c;
+        color:#fff;
+        
+        button{
+            border:2px solid #fff;
+            color:#fff;
+            padding:10px;
+            margin-top:42px;
+        }
+    }
+    .cont2-cont{
+        padding:55px 15%;
+        @include h2-p;
+        .cont2-cont-left{
+            width:50%;
+            i{
+                color:$color-red;
+                font-size:60px;
+            }
+            @include button;
+
+        }
+        .cont2-cont-right{
+            width:40%;
+        }
+    }
+}
+
+//content3
+.content3{
+    padding:62px 22% 38px;
+    background-color:$background-color-main;
+    text-align:$text-a-c;
+    color:#fff;
+    .cont3-icon{
+        margin-top:30px;
+        line-height:44px;
+        i{
+            color:$color-red;
+            font-size:60px;
+        }
+    }
+    h2{
+        line-height:38px;
+    }
+    button{
+        margin-top:30px;
+        color:#fff;
+        border:1px solid #fff;
+        border-radius:12px/50%;
+    }
+    
+}
+
+//content4
+.content4{
+    padding:32px 15%;
+    background-color:$background-color;
+    text-align:$text-a-c;
+    .cont4-title{
+        @include h2-p;
+        p{
+            width:30%;
+            margin: 0 auto;
+        }
+        padding-bottom:38px;
+
+    }
+    .cont4-cont{
+        button{
+            background-color:$color-red;
+            padding:8px 92px;
+            color:#fff;
+        }
+        .cont4-price{
+            float:left;
+            background-color:#fff;
+            padding:16px 22px 36px;
+            width:26%;
+            margin-right:2%;
+            @include h2-p;
+            .command p{
+                margin-top:15px;
+            }
+            .dollar{
+                font-size:62px;
+                color:$color-red;
+                position:relative;
+                vertical-align:top;
+                &:before{
+                    content:'$';
+                    position:absolute;
+                    left:-12px;
+                    top:6px;
+                    color:#000;
+                    font-size:24px;
+                }
+            }
+            .cent{
+                font-size:24px;
+                color:$color-red;
+                position:relative;
+                vertical-align:top;
+                &:after{
+                    content:'/MONTHLY';
+                    position:absolute;
+                    left:0;
+                    top:30px;
+                    color:#000;
+                    font-size:12px;
+                }
+            }
+        }
+    }
+}
+
+//content5
+.content5{
+    text-align:$text-a-c;
+    padding: 36px 15%;
+    .cont5-title{
+        h1{
+            line-height:38px;
+        }
+        p{
+            width:45%;
+            margin:0 auto;
+            color:$p-color;
+        }
+        padding-bottom:46px;
+    }
+    .cont5-tab{
+        .cont5-tab-title{
+            border-bottom:5px solid #000;
+            a{
+                font-size:14px;
+                padding:8px 30px;
+                display:inline-block;
+                color:#000;
+            }
+            .tab-active{
+                background-color:$color-red;
+                color:#fff;
+            }
+        }
+    }
+    @mixin section{
+        padding:30px 10%;
+        p{
+            color:$p-color;
+        }
+    }
+    .cont5-section1,.cont5-section2,.cont5-section3{
+        @include section;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//footer
+.footer{
+    $color:#4b494a;
+    background-color:$background-color-main;
+    padding:0 19.4%;
+    .footer-top{
+        text-align:$text-a-c;
+        .footer-logo{
+            margin:42px 0;
+            display:inline-block;
+            color:#fff;
+            font-size:24px;
+            width:36px;
+            border-bottom:5px solid #fff;
+            word-wrap:break-word;
+        }
+        ul{ 
+            margin-bottom:34px;
+            li{ 
+                display:inline-block;
+                a{
+                    display:inline-block;
+                    color:#cf3839;
+                    margin-right:16px;
+                }
+                
+            }
+        }
+        
+        $lineHeight:28px;
+        i{
+            color:$color;
+            font-size:20px;
+            line-height:$lineHeight;
+        }
+        p{
+            color:$color;
+            margin-bottom:$lineHeight;
+        }
+    }
+    .footer-bottom{
+        border-top:1px solid #555555;
+        padding:30px 0 ;
+        color:$color;
+        text-align:$text-a-c;
+        .footer-logo{
+            display:inline-block;
+        }
+    }
+}

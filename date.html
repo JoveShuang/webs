@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期选择器</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+<body>
+    <form id="date1" method="post">
+        <div id="select-group"></div>
+
+        <input type="checkbox" id="checkbox" name="init" value="">是否提前显示月/日
+        <input type="submit" name="" value="提交">    
+    </form>
+    <button type="button" onclick="add()">添加</button>
+    <button type="button" onclick="add1()">添加相同</button>
+    <script src="dateList.js"></script>
+    <script type="text/javascript">
+        function add(){
+            var id = 1;
+            var selectClass = 'select-group' + id; 
+            $('#select-group').after('<div id="'+ selectClass +'"></div>');
+            var run = new dateList();
+            run.ran(selectClass,[1970,2018]);
+            id++;
+        }
+        function add1(){
+            var run = new dateList();
+            run.ran('select-group',[1970,2018]);
+        }
+        
+        var run = new dateList();
+        run.ran('select-group',[1970,2018]/*,1992,12,31, function(message){
+            alert(message);
+            this.ran('select-group',[1970,2018]);
+        }*/);
+        
+
+
+
+            // return;
+            // $(theYear).change(function(){
+
+            // $(theDay).hide();
+            // $(theMonth).show();
+            // $(theMonth).empty();
+            // $(theMonth).append('<option value="">--请选择--</option>');
+            // for(var i = 1;i<13;i++){
+            //     $(theMonth).append('<option value='+i+'>'+i+'月</option>')
+            // }
+            // })
+            // $(theMonth).change(function(){
+            //     year = +$(theYear+' option:selected').val();
+            //     month = +$(theMonth+' option:selected').val();
+            //     var days = 0;
+            //     $(theDay).show();
+            //     $(theDay).empty();
+            //     $(theDay).append('<option>--请选择--</option>');
+                
+            //     for(var i = 1;i<=days;i++){
+            //         $(theDay).append('<option value='+i+'>'+i+'日</option>')
+            //     }
+            // })
+            // $(theDay).change(function(){
+            //     day = +$(theDay+' option:selected').val();
+            // })
+            // $('.year').empty();
+            // $('.year').append('<option value= '+defauleYear+' >'+defauleYear+'年</option>');
+            // $('.month').append('<option value= '+defaultMonth+' >'+defaultMonth+'月</option>');
+            // $('.day').append('<option value= '+defaultDay+' >'+defaultDay+'日</option>');     
+        
+        // for(var i = 1970;i<2019;i++){
+        //     $('#year').append('<option value='+i+'>'+i+'年</option>')
+        // }
+        // $('#year').change(function(){
+        //     $('#day').hide();
+        //     $('#month').show();
+        //     $('#month').empty();
+        //     $('#month').append('<option>--请选择--</option>');
+        //     for(var i = 1;i<13;i++){
+        //         $('#month').append('<option value='+i+'>'+i+'月</option>')
+        //     }
+        // })
+        // $('#month').change(function(){
+        //     year = +$('#year option:selected').val();
+        //     month = +$('#month option:selected').val();
+        //     var days = 0;
+        //     $('#day').show();
+        //     $('#day').empty();
+        //     $('#day').append('<option>--请选择--</option>');
+        //     //判断每月天数
+        //     switch(month){
+        //             case 1:
+        //             case 3:
+        //             case 5:
+        //             case 7:
+        //             case 8:
+        //             case 10:
+        //             case 12: 
+        //             days = 31;
+        //             break;
+        //             case 4:
+        //             case 6:
+        //             case 9:
+        //             case 11:
+        //             days = 30;
+        //             break;
+        //             case 2:
+        //             if((year%4 == 0 && year %100 != 0) || year%400 == 0){
+        //                 days = 29;
+        //             }else{
+        //                 days = 28;
+        //             }
+        //             break;
+        //         }
+        //     for(var i = 1;i<=days;i++){
+        //         $('#day').append('<option value='+i+'>'+i+'日</option>')
+        //     }
+        // })
+        // $('#day').change(function(){
+        //     day = +$('#day option:selected').val();
+        // })
+
+        // $('#checkbox').change(function(){
+        // })
+    </script>    
+</body>
+
+</html>
